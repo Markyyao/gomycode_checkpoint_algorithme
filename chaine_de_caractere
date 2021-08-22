@@ -1,0 +1,40 @@
+ALGORITHME chaine_de_caractere
+
+VAR
+
+   phrase[500]
+   i,j,caractere := 0, mots := 0, voyelle :=0 : integer
+   
+BEGIN
+
+WRITE ("Renseigner la phrase a traité");
+READ ("phrase");
+
+FOR i FROM 1 TO 500 STEP DO
+    IF (phrase[i] != ".") THEN
+      IF (phrase[i] := "" && phrase[i+1] := "") THEN
+         WRITE ("Reduire l'espacement entre les mots ou mettre un poinrt pour indiquer la fin de la phrase");
+            READ (phrase);
+            ELSE IF (phrase[i] != "") THEN
+                caractere := caractere +1;
+            END IF
+        END IF
+    END IF
+
+END FOR
+FOR j FROM 1 TO 500 STEP DO
+    IF (phrase[1] != "") THEN
+       IF (phrase[j] = "" || phrase[j] = ".")
+           mots := mots + 1;
+       END IF
+    END IF
+FOR j FROM 1 TO 500 STEP DO
+    IF (phrase[k] = a || phrase[k] = o || phrase[k] = u || phrase[k] = i || phrase[k] = y || phrase[k] = e) THEN
+        voyelle := voyelle +1;
+    END IF
+END FOR
+WRITE ("le nombre de caratere est :", caractere);
+WRITE ("le nombre de mots est :", mots);
+WRITE ("le nombre de voyelle est :", voyelle);
+
+END
